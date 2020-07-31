@@ -1,0 +1,99 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
+| Date         : Tue Jul 28 01:10:15 2020
+| Host         : SQ-20180811MLNB running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file top_control_sets_placed.rpt
+| Design       : top
+| Device       : xc7a35t
+------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Number of unique control sets                            |    27 |
+| Unused register locations in slices containing registers |    84 |
++----------------------------------------------------------+-------+
+
+
+2. Histogram
+------------
+
++--------+--------------+
+| Fanout | Control Sets |
++--------+--------------+
+|      2 |            1 |
+|      4 |            1 |
+|      5 |            2 |
+|      6 |            1 |
+|      7 |            1 |
+|      9 |            1 |
+|     10 |            1 |
+|     11 |            1 |
+|    16+ |           18 |
++--------+--------------+
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |              57 |           36 |
+| No           | No                    | Yes                    |             246 |           96 |
+| No           | Yes                   | No                     |               0 |            0 |
+| Yes          | No                    | No                     |               0 |            0 |
+| Yes          | No                    | Yes                    |             389 |          115 |
+| Yes          | Yes                   | No                     |               0 |            0 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++-----------------------------+------------------------------------------------------+------------------------------------------------------------+------------------+----------------+
+|         Clock Signal        |                     Enable Signal                    |                      Set/Reset Signal                      | Slice Load Count | Bel Load Count |
++-----------------------------+------------------------------------------------------+------------------------------------------------------------+------------------+----------------+
+|  seg_inst/clk_1k            |                                                      | seg_inst/bbstub_locked                                     |                1 |              2 |
+|  pll_clk_inst/inst/clk_out1 | game_show_inst/E[0]                                  | snake_ctrl_inst/bbstub_locked                              |                2 |              4 |
+|  pll_clk_inst/inst/clk_out1 | game_show_inst/FSM_sequential_state_c_reg[1]_0[0]    | game_show_inst/start_end_vga_inst1/bbstub_locked           |                3 |              5 |
+|  pll_clk_inst/inst/clk_out1 | snake_ctrl_inst/body_y[0][4]_i_1_n_0                 | snake_ctrl_inst/bbstub_locked                              |                3 |              5 |
+|  pll_clk_inst/inst/clk_out1 | snake_ctrl_inst/body_x[0][5]_i_1_n_0                 | snake_ctrl_inst/bbstub_locked                              |                3 |              6 |
+|  pll_clk_inst/inst/clk_out1 | generate_apple_inst/add_cnt3                         | game_show_inst/start_end_vga_inst2/bbstub_locked           |                2 |              7 |
+|  pll_clk_inst/inst/clk_out1 | generate_apple_inst/add_cnt3                         | key_inst/debounce_inst/bbstub_locked                       |                3 |              9 |
+|  pll_clk_inst/inst/clk_out1 | game_show_inst/play_vga_inst/add_v_cnt               | snake_ctrl_inst/bbstub_locked                              |                3 |             10 |
+|  pll_clk_inst/inst/clk_out1 | generate_apple_inst/apple_x0                         | game_show_inst/start_end_vga_inst1/bbstub_locked           |                4 |             11 |
+|  pll_clk_inst/inst/clk_out1 | game_show_inst/start_end_vga_inst2/add_v_cnt         | game_show_inst/start_end_vga_inst2/bbstub_locked           |                4 |             16 |
+|  pll_clk_inst/inst/clk_out1 | game_show_inst/start_end_vga_inst2/v_cnt_reg[7]_0[0] | game_show_inst/start_end_vga_inst2/bbstub_locked           |                4 |             16 |
+|  pll_clk_inst/inst/clk_out1 | game_show_inst/start_end_vga_inst/add_v_cnt          | game_show_inst/start_end_vga_inst2/bbstub_locked           |                4 |             16 |
+|  pll_clk_inst/inst/clk_out1 | game_show_inst/start_end_vga_inst/v_cnt_reg[7]_0[0]  | game_show_inst/start_end_vga_inst1/bbstub_locked           |                4 |             16 |
+|  pll_clk_inst/inst/clk_out1 | game_show_inst/start_end_vga_inst1/add_v_cnt         | game_show_inst/start_end_vga_inst2/bbstub_locked           |                4 |             16 |
+|  pll_clk_inst/inst/clk_out1 | game_show_inst/start_end_vga_inst1/D[0]              | game_show_inst/start_end_vga_inst1/bbstub_locked           |                4 |             16 |
+|  pll_clk_inst/inst/clk_out1 | key_inst/debounce_inst/cnt_reg[15]_0                 | key_inst/debounce_inst/bbstub_locked                       |                5 |             19 |
+|  pll_clk_inst/inst/clk_out1 | key_inst/debounce_inst1/cnt[0]_i_1__0_n_0            | key_inst/debounce_inst/bbstub_locked                       |                5 |             19 |
+|  pll_clk_inst/inst/clk_out1 | key_inst/debounce_inst2/cnt[0]_i_1__1_n_0            | key_inst/debounce_inst/bbstub_locked                       |                5 |             19 |
+|  pll_clk_inst/inst/clk_out1 | key_inst/debounce_up_inst/cnt_reg[8]_0               | key_inst/debounce_inst/bbstub_locked                       |                5 |             19 |
+|  pll_clk_inst/inst/clk_out1 |                                                      | seg_inst/bbstub_locked                                     |               14 |             33 |
+|  pll_clk_inst/inst/clk_out1 |                                                      | key_inst/debounce_inst/bbstub_locked                       |               12 |             35 |
+|  pll_clk_inst/inst/clk_out1 | game_show_inst/FSM_sequential_state_c_reg[1]_0[0]    | snake_ctrl_inst/bbstub_locked                              |               14 |             40 |
+|  pll_clk_inst/inst/clk_out1 |                                                      | game_show_inst/start_end_vga_inst2/bbstub_locked           |               22 |             49 |
+|  pll_clk_inst/inst/clk_out1 |                                                      | snake_ctrl_inst/bbstub_locked                              |               21 |             55 |
+|  pll_clk_inst/inst/clk_out1 |                                                      |                                                            |               36 |             57 |
+|  pll_clk_inst/inst/clk_out1 |                                                      | game_show_inst/start_end_vga_inst1/bbstub_locked           |               26 |             72 |
+|  pll_clk_inst/inst/clk_out1 | game_show_inst/FSM_sequential_state_c_reg[1]_0[0]    | snake_ctrl_inst/genblk1.snake_body[4].body_x[4][3]_i_2_n_0 |               34 |            120 |
++-----------------------------+------------------------------------------------------+------------------------------------------------------------+------------------+----------------+
+
+
